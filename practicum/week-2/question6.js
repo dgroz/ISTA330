@@ -6,5 +6,5 @@ output: 3
 */
 
 var median = function(input) {
-
+    
 };

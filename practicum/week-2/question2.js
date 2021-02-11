@@ -9,7 +9,47 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
          and therfore each of the three kids will get 8 cookies.
  */
 
- var canGetEqualCookies = function(cookies, extraCookies) {
-     
-    
- };
+var canGetEqualCookies = function(cookies, extraCookies) {
+    var i
+    for (i=0; i < extraCookies; i++)        {
+            lowestIndex = cookies.indexOf(min(cookies))
+            highestIndex = cookies.indexOf(max(cookies))
+            if (cookies[lowestIndex] <= cookies[highestIndex]) {
+                cookies[lowestIndex]++
+            }
+    }                   
+    lowestChild = cookies[cookies.indexOf(min(cookies))]
+    highestChild = cookies[cookies.indexOf(max(cookies))]
+    if (lowestChild === highestChild)       {
+            return true
+    } else {
+            return false
+    }
+}
+
+
+var min = function(arr)       {
+    curLowest = null
+    for (i=0; i<arr.length; i++)    {
+        if (curLowest === null) {
+            curLowest = arr[i]
+        }
+        else if (arr[i] < curLowest) {
+            curLowest = arr[i]
+        }
+    }
+    return curLowest
+}
+
+
+var max = function(arr)       {
+    curHighest = null
+    for (i=0; i<arr.length; i++)    {
+        if (curHighest === null) {
+            curHighest = arr[i]
+        } else if (arr[i] > curHighest) {
+            curHighest = arr[i]
+        }
+    }
+    return curHighest
+}

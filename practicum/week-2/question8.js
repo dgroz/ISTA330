@@ -8,5 +8,18 @@ output: [1, 0, 1, 2]
 */
 
 var biggerAndEven = function(input) {
-
+    countList = []
+    for (i=0; i < input.length; i++)    {
+        curCount = 0
+        for (curIndex=0; curIndex < input.length; curIndex++) {
+            if (curIndex !== i) {
+                if ((input[curIndex] % 2 === 0) 
+                && (input[curIndex] > input[i])) {
+                    curCount++
+                }
+            }
+        }
+        countList.push(curCount)
+    }
+    return countList
 };
