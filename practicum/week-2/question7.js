@@ -50,4 +50,3 @@ var max = function(arr)       {
        }
        return curHighest
 }
-
