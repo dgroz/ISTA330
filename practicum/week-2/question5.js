@@ -32,5 +32,6 @@ var minimalReduction = function(n) {
         n-1
         count++
     }
+    return count
 };
 
